@@ -9,9 +9,9 @@ npm install
 ```
 npm run serve
 ```
-# Tegnologias implementadas
+# Tecnologías implementadas
 -Vue CLI
 -Sass
 
-# Informacion sobre elmentos desconocidos
-La prueba sugeria emplear una imagen para representar el 'blood-status" de los personajes ("ancestry" en la API), no obstante, no se encontraron iconos apropiados.
+# Información sobre elementos desconocidos
+La prueba sugería emplear una imagen para representar el "blood-status" de los personajes ("ancestry" en la API), no obstante, no se encontraron iconos apropiados.
