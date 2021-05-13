@@ -1,0 +1,24 @@
+<div class="griffindor">
+        <div class="house-info-header">
+            <h1>{{selectedHouseName}}</h1>
+            <div class="filters">
+                <button  @click="toggleDropdown = !toggleDropdown"><i class="fas fa-sort-down"></i> Filtrar por:</button>
+                <div class="filters_dropdown" v-if="toggleDropdown">
+                    <div class="filters_dropdown-item" @click="sortbyLastName = false">Filtrar por nombre</div>
+                    <div class="filters_dropdown-item" @click="sortbyLastName = true">Filtrar por apellido</div>
+                </div>
+                <input type="text" v-model="nameToSearch" placeholder="Busca algun integrante">
+            </div>
+        </div>
+        <ul class="character-list">
+            <li class="character-item" v-for="char in filterResults" :key="char.name">
+                <img class="character-item_img" :src="char.image" alt="">
+                <div class="character-item_name">
+                    <h2>
+                        {{char.name}}
+                    </h2>
+                    <span>{{char.ancestry}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>

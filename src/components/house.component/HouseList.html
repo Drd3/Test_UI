@@ -1,0 +1,10 @@
+<div class="container">
+      <ul class="house-list-nav">
+        <li class="house-list-nav_item" v-for=" houseItem in housesList" v-bind:key="houseItem.name" @click="GetCharactersList(houseItem.name), selectectHouseName = houseItem.name ">
+          <img  class="house-img" :src="DetectHouseImage(houseItem.name)" alt="">
+          <div class="house-name">{{houseItem.name}}</div>
+          <span class="house-count">Integrantes: {{houseItem.length}}</span>
+        </li>
+      </ul>
+      <CharactersByHouses v-if="selectectHouseName" :characterList="selectectHouse" :selectedHouseName="selectectHouseName"  />
+  </div>
